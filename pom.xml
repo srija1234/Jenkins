@@ -15,7 +15,16 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>test</finalName>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>true</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+       <finalName>test</finalName>
   </build>
-</project>
+ </project>
